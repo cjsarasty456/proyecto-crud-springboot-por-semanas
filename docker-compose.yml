@@ -10,5 +10,15 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+  ecommerce:
+    build: ./ecommerce-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+  notification:
+    build: ./notification-service
+    ports:
+      - "8081:8081"
 volumes:
   postgres_data:
