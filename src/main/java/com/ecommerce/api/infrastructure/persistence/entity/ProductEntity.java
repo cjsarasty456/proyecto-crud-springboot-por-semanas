@@ -1,16 +1,12 @@
-package com.ecommerce.api.entity;
-
+package com.ecommerce.api.infrastructure.persistence.entity;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 import java.util.UUID;
 import java.math.BigDecimal;
-
 @Entity
 @Table(name = "products")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Product {
+public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID productId;

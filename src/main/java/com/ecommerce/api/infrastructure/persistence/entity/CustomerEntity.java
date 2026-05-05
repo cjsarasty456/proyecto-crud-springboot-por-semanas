@@ -1,15 +1,11 @@
-package com.ecommerce.api.entity;
-
+package com.ecommerce.api.infrastructure.persistence.entity;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 import java.util.UUID;
-
 @Entity
 @Table(name = "customers")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Customer {
+public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID customerId;
